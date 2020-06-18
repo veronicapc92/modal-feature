@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varela Round", sans-serif;
+}
+
+.click-me-btn {
+  outline: none;
+  width: 150px;
+  height: 50px;
+  font-family: "Varela Round", sans-serif;
+  font-size: 17px;
+  background-color: #ade8f4;
+  color: #0096c7;
+  border: 2px solid #0096c7;
+  cursor: pointer;
+}
+
+.click-me-btn:hover {
+  background-color: #0096c7;
+  color: #ade8f4;
+}
+
+.backdrop {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+.backdrop.active {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 10;
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  border: 5px solid #0096c7;
+  border-radius: 15px;
+  font-size: 30px;
+  color: #0096c7;
+  transition: 200ms ease-in-out;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-btn-container {
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.close-btn {
+  margin-right: 15px;
+  outline: none;
+  border: none;
+  background: none;
+  color: #0096c7;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.message {
+  padding: 0;
+  margin: 0;
+  cursor: default;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
